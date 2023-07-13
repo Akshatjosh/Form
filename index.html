@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4c98a5;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .form-field {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form method="GET" >
+        <fieldset>
+            <legend>User Registration</legend>
+
+            <div class="form-field">
+                <label for="username">Name:</label>
+                <input type="text" name="username" id="username" required placeholder="Enter your name">
+            </div>
+
+            <div class="form-field">
+                <label for="useremail">Email:</label>
+                <input type="email" name="useremail" id="useremail" required autofocus placeholder="Enter your email">
+            </div>
+
+            <div class="form-field">
+                <label for="userpassword">Password:</label>
+                <input type="password" name="userpassword" id="userpassword" required>
+            </div>
+
+            <div class="form-field">
+                <label for="useraddress">Address:</label>
+                <textarea name="useraddress" id="useraddress" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="form-field">
+                <label for="usergender">Gender:</label>
+                <label for="Male"><input type="radio" name="usergender" id="Male" value="Male"> Male</label>
+                <label for="Female"><input type="radio" name="usergender" id="Female" value="Female"> Female</label>
+                <label for="Others"><input type="radio" name="usergender" id="Others" value="Others"> Others</label>
+            </div>
+
+            <div class="form-field">
+                <label for="userdob">Date of Birth:</label>
+                <input type="date" name="userdob" id="userdob">
+            </div>
+
+            <div class="form-field">
+                <label for="time">Time:</label>
+                <input type="time" name="time" id="time">
+            </div>
+
+            <div class="form-field">
+                <label for="phonenumber">Mobile Number:</label>
+                <input type="tel" name="phonenumber" id="phonenumber">
+            </div>
+
+            <div class="form-field">
+                <label for="country">Country:</label>
+                <select name="country" id="country">
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">UK</option>
+                    <option value="australia">Australia</option>
+                </select>
+            </div>
+
+            <div class="form-field form-submit">
+                <input type="submit" value="Submit My Form">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
